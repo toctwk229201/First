@@ -1,0 +1,197 @@
+#include <iostream>
+#include <stdlib.h>
+using namespace std;
+char help,back;
+char hospital_information;
+int main() {
+	cout << "-------歡迎使用醫院資料查詢系統-------" << endl;
+	cout << "請輸入HELP以顯示指令集，亦可直接輸入對應指令" << endl;
+	short select_button_function;
+	cout << "請輸入: ";
+	cin >> select_button_function;
+	switch (select_button_function) {
+	case 1:
+		cout << "1 九龍" << "\n" << "2 新界及離島" << "\n" << "3 香港島" << endl;
+		break;
+	default:
+		cout << "無效的指令，請重新輸入";
+		break;
+	}
+	short select_button_region;
+	cout << "請選擇醫院所在地區: ";
+	cin >> select_button_region;
+	switch (select_button_region) {
+	case 1:
+		cout << "九龍中" << "\n" << "01 香港佛教醫院" << "\n" << "02 香港兒童醫院" << "\n" << "03 香港眼科醫院" << "\n" << "04 香港紅十字會輸血服務中心" << "\n" << "05 九龍醫院" << "\n" << "06 廣華醫院" << "\n" << "07 聖母醫院" << "\n" << "08 伊利沙伯醫院" << "\n" << "09 東華三院黃大仙醫院" << endl;
+		cout << "九龍東" << "\n" << "10 靈實醫院" << "\n" << "11 將軍澳醫院" << "\n" << "12 基督教聯合醫院" << endl;
+		cout << "九龍西" << "\n" << "13 明愛醫院" << "\n" << "14 葵涌醫院" << "\n" << "15 北大嶼山醫院" << "\n" << "16 瑪嘉烈醫院" << "\n" << "17 仁濟醫院" << endl;
+		break;
+	case 2:
+		cout << "新界東" << "\n" << "01 雅麗氏何妙齡那打素醫院" << "\n" << "02 白普理寧養中心" << "\n" << "03 沙田慈氏護養院" << "\n" << "04 北區醫院" << "\n" << "05 威爾斯親王醫院" << "\n" << "06 沙田醫院" << "07 大埔醫院" << endl;
+		cout << "新界西" << "\n" << "08 青山醫院" << "\n" << "09 博愛醫院" << "\n" << "10 小欖醫院" << "\n" << "11 天水圍醫院" << "\n" << "12 屯門醫院" << endl;
+		break;
+	case 3:
+		cout << "港島東" << "\n" << "01 舂磡角慈氏護養院" << "\n" << "02 東區尤德夫人那打素醫院" << "\n" << "03 律敦治醫院" << "\n" << "04 長洲醫院" << "\n" << "05 鄧肇堅醫院" << "\n" << "06 東華東院" << "07 黃竹坑醫院" << endl;
+		cout << "港島西" << "\n" << "08 葛量洪醫院" << "\n" << "09 麥理浩復康院" << "\n" << "10 瑪麗醫院" << "\n" << "11 大口環根德公爵夫人兒童醫院" << "\n" << "12 贊育醫院" << "\n" << "13 東華三院馮堯敬醫院" << "14 東華醫院" << endl;
+		break;
+	default:
+		cout << "無效的指令，請重新輸入: ";
+		break;
+	}
+	short select_button_hospital_name_kowloon;
+	cout << "請輸入醫院對應數字: ";
+	cin >> select_button_hospital_name_kowloon;
+	system("cls");
+	switch (select_button_hospital_name_kowloon) {
+		case 1:
+			cout << "香港佛教醫院" << "\n" << "電話: 2339 6111" << "\n" << "地址: 九龍樂富杏林街 10 號" << "\n" << "網址: https://www3.ha.org.hk/hkbh" << endl;
+			break;
+		case 2:
+			cout << "香港兒童醫院" << "\n" << "電話: 3513 3888" << "\n" << "地址: 九龍灣承昌道一號" << "\n" << "網址: http://www.ha.org.hk/hkch" << endl;
+			break;
+		case 3:
+			cout << "香港眼科醫院" << "\n" << "電話: 2762 3007" << "\n" << "地址: 九龍亞皆老街 147K" << endl;
+			break;
+		case 4:
+			cout << "香港紅十字會輸血服務中心" << "\n" << "電話: 2710 1234" << "\n" << "地址: 九龍京士柏道 15 號" << "\n" << "網址: http://www5.ha.org.hk/rcbts/" << endl;
+			break;
+		case 5:
+			cout << "九龍醫院" << "\n" << "電話: 3129 7111" << "\n" << "地址: 九龍亞皆老街 147A" << "\n" << "網址: http://www.ha.org.hk/kh" << endl;
+			break;
+		case 6:
+			cout << "廣華醫院" << "\n" << "電話: 2332 2311" << "\n" << "地址: 九龍窩打老道 25 號" << "\n" << "網址: http://www.ha.org.hk/kwh/defauult.htm" << endl;
+			break;
+		case 7:
+			cout << "聖母醫院" << "\n" << "電話: 2320 2121" << "\n" << "地址: 九龍黃大仙沙田坳道 118 號" << endl;
+			break;
+		case 8:
+			cout << "伊利沙伯醫院" << "\n" << "電話: 3506 8888" << "\n" << "地址: 九龍加士居道30號" << "\n" << "網址: http://www.ha.org.hk/qeh" << endl;
+			break;
+		case 9:
+			cout << "東華三院黃大仙醫院" << "\n" << "電話: 2320 0377" << "\n" << "地址: 九龍黃大仙沙田坳道124號" << endl;
+			break;
+		case 10:
+			cout << "靈實醫院" << "\n" << "電話: 2703 8888 / 2409 5868" << "\n" << "地址: 九龍將軍澳靈實路 8 號" << endl;
+			break;
+		case 11:
+			cout << "將軍澳醫院" << "\n" << "電話: 2208 0111" << "\n" << "地址: 將軍澳坑口寶寧里 2 號" << endl;
+			break;
+		case 12:
+			cout << "基督教聯合醫院" << "\n" << "電話: 2379 9611" << "\n" << "地址: 九龍觀塘協和街 130 號" << "\n" << "網址: http://www.uch.org.hk" << endl;
+			break;
+		case 13:
+			cout << "明愛醫院" << "\n" << "電話: 3408 5678" << "\n" << "地址: 九龍深水埗永康街 111 號" << endl;
+			break;
+		case 14:
+			cout << "葵涌醫院" << "\n" << "電話: 2959 8111" << "\n" << "地址: 新界葵涌醫院道 3-15 號" << "\n" << "網址: http://www.ha.org.hk/kch/startt.html" << endl;
+			break;
+		case 15:
+			cout << "北大嶼山醫院" << "\n" << "電話: 3467 7000" << "\n" << "地址: 大嶼山東涌松仁路8號" << endl;
+			break;
+		case 16:
+			cout << "瑪嘉烈醫院" << "\n" << "電話: 2990 1111" << "\n" << "地址: 九龍荔枝角瑪嘉烈醫院道2-10號" << endl;
+			break;
+		case 17:
+			cout << "仁濟醫院" << "\n" << "電話: 2417 8383" << "\n" << "地址: 新界荃灣仁濟街 7-11 號" << endl;
+			break;
+		default:
+			cout << "無效的指令，請重新輸入: ";
+			break;
+	}
+	short select_button_hospital_name_new_territories;
+	cout << "請輸入醫院對應數字: ";
+	cin >> select_button_hospital_name_new_territories;
+	system ("cls");
+	switch (select_button_hospital_name_new_territories) {
+		case 1:
+			cout << "雅麗氏何妙齡那打素醫院" << "\n" << "電話: 2689 2000" << "\n" << "地址: 新界大埔全安路 11 號" << "\n" << "網址: http://www3.ha.org.hk/ahnh/" << endl;
+			break;
+		case 2:
+			cout << "白普理寧養中心" << "\n" << "電話: 2636 0163" << "\n" << "地址: 新界沙田亞公角山路 17 號" << "\n" << "網址: http://www3.ha.org.hk/BBH/defaault.htm" << endl;
+			break;
+		case 3:
+			cout << "沙田慈氏護養院" << "\n" << "電話: 2636 7288" << "\n" << "地址: 新界沙田亞公角山路 30 號" << endl;
+			break;
+		case 4:
+			cout << "北區醫院" << "\n" << "電話: 2683 8888" << "\n" << "地址: 新界上水保健路9號" << "\n" << "網址: http://www3.ha.org.hk/ndh/indeex.htm" << endl;
+			break;
+		case 5:
+			cout << "威爾斯親王醫院" << "\n" << "電話: 3505 2211" << "\n" << "地址: 新界沙田銀城街 30-32 號" << "\n" << "網址: http://www3.ha.org.hk/pwh/indeex.htm" << endl;
+			break;
+		case 6:
+			cout << "沙田醫院" << "\n" << "電話: 3919 7500" << "\n" << "地址: 新界沙田馬鞍山亞公角街 33 號" << "\n" << "網址: https://www3.ha.org.hk/sh/indeex.asp" << endl;
+			break;
+		case 7:
+			cout << "大埔醫院" << "\n" << "電話: 2607 6111" << "\n" << "地址: 新界大埔全安路 9 號" << "\n" << "網址: http://www3.ha.org.hk/tph" << endl;
+			break;
+		case 8:
+			cout << "青山醫院" << "\n" << "電話: 2456 7111" << "\n" << "地址: 新界屯門青松觀路 15 號" << endl;
+			break;
+		case 9:
+			cout << "博愛醫院" << "\n" << "電話: 2486 8000" << "\n" << "地址: 新界元朗坳頭"<< "\n" << "網址: http://www3.ha.org.hk/poh/defaault.asp" << endl;
+			break;
+		case 10:
+			cout << "小欖醫院" << "\n" << "電話: 2456 7111" << "\n" << "地址: 新界屯門青松觀路 15 號" << endl;
+			break;
+		case 11:
+			cout << "天水圍醫院" << "\n" << "電話: 3513 5000" << "\n" << "地址: 新界天水圍天壇街11號" << "\n" << "網址:	http://www.ha.org.hk/tswh"<< endl;
+			break;
+		case 12:
+			cout << "屯門醫院" << "\n" << "電話: 2468 5111" << "\n" << "地址: 新界屯門青松觀路廿三號" << "\n" << "網址: http://www.ha.org.hk/tmh" << endl;
+			break;
+		default:
+			cout << "無效的指令，請重新輸入: ";
+			break;
+	}
+	short select_button_hospital_name_hong_kong_island;
+	cout << "請輸入醫院對應數字: ";
+	cin >> select_button_hospital_name_hong_kong_island;
+	system ("cls");
+	switch (select_button_hospital_name_hong_kong_island) {
+		case 1:
+			cout << "舂磡角慈氏護養院" << "\n" << "電話: 2813 9823" << "\n" << "地址: 香港舂磡角道128號" << endl;
+			break;
+		case 2:
+			cout << "東區尤德夫人那打素醫院" << "\n" << "電話: 2595 7920" << "\n" << "地址: 香港柴灣樂民道 3 號" << "\n" << "網址: http://www.ha.org.hk/pyneh" << endl;
+			break;
+		case 3:
+			cout << "律敦治醫院" << "\n" << "電話: 2291 2000" << "\n" << "地址: 香港灣仔皇后大道東266號" << "\n" << "網址: http://www.ha.org.hk/rtskh" << endl;
+			break;
+		case 4:
+			cout << "長洲醫院" << "\n" << "電話: 2986 2100" << "\n" << "地址: 長洲東灣長洲醫院路" << endl;
+			break;
+		case 5:
+			cout << "鄧肇堅醫院" << "\n" << "電話: 2291 2000" << "\n" << "地址: 香港灣仔皇后大道東 282 號" << "\n" << "網址: http://www.ha.org.hk/rtskh" << endl;
+			break;
+		case 6:
+			cout << "東華東院" << "\n" << "電話: 2162 6888" << "\n" << "地址: 香港銅鑼灣東院道 19 號" << "\n" << "網址: http://www.ha.org.hk/tweh/" << endl;
+			break;
+		case 7:
+			cout << "黃竹坑醫院" << "\n" << "電話: 2873 7222" << "\n" << "地址: 香港黃竹坑黃竹坑徑 2 號" << endl;
+			break;
+		case 8:
+			cout << "葛量洪醫院" << "\n" << "電話: 2518 2111" << "\n" << "地址: 香港仔黃竹坑道125號" << endl;
+			break;
+		case 9:
+			cout << "麥理浩復康院" << "\n" << "電話: 2817 0018" << "\n" << "地址: 香港薄扶林沙灣徑 7 號" << endl;
+			break;
+		case 10:
+			cout << "瑪麗醫院" << "\n" << "電話: 2255 3838" << "\n" << "地址: 香港薄扶林道 102 號" << "\n" << "網址: http://www.ha.org.hk/qmh" << endl;
+			break;
+		case 11:
+			cout << "大口環根德公爵夫人兒童醫院" << "\n" << "電話: 	2817 7111" << "\n" << "地址: 香港薄扶林大口環道12號" << endl;
+			break;
+		case 12:
+			cout << "贊育醫院" << "\n" << "電話: 2589 2100" << "\n" << "地址: 香港西營盤醫院道 30 號" << endl;
+			break;
+		case 13:
+			cout << "東華三院馮堯敬醫院" << "\n" << "電話: 2855 6111" << "\n" << "地址: 香港薄扶林大口環道９號" << endl;
+			break;
+		case 14:
+			cout << "東華醫院" << "\n" << "電話: 2589 8111" << "\n" << "地址: 香港上環普仁街 12 號" << "\n" << "網址: http://www3.ha.org.hk/twh" << endl;
+			break;
+		default:
+			cout << "無效的指令，請重新輸入: ";
+			break;
+	}
+}
